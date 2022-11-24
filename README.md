@@ -4,13 +4,18 @@ La aplicacion cuenta con una pantalla de Login, lo que permite iniciar con un us
 
 La aplicación es totalmente responsiva, y se ve excelente tanto en móvil, tablet laptop o pantalla. Así mismo, cuenta con un ancho máximo para evitar que todo el diseño se desborde.
 
-> **NOTA:** Tomar en cuenta lo siguiente.
+> **NOTA:** :warning: Tomar en cuenta lo siguiente.
 >
+>> Existe la funcionalidad del scroll infinito, pero en mi caso, no siempre es muy perceptible, ya que la url para hacer las peticiones, contesta muy muy rápido, si se desea, se puede modificar la red del navegador para simular una mala conexión, la app no se quedará colgada, ya que cuenta con un timeout en producción y desarrollo de 60 seg.
+>>
 >> Se pueden crear tantos usuarios como se desee, estos se almacenan en **localStorage**.
 >>
 >> Para hacer un inicio con un usuario, se velida la información almacenada contra la que el usuario escribe, eso para simular un login.
 >>
 >> Todos los datos que simulen peticiones al API, pasan por **Context API** y se almacenan en **localStorage**.
+>>
+>> La aplicación tiene los archivos **.env** en el repositorio, cosa que jamaás se debee de hacer, pero para fines del ejercicio y para que quien clone mi proyecto lo pueda correr en su local, construir y correrlo en local ya construido, es que se subieron esos archivos.
+>>
 
 &nbsp;
 
@@ -24,6 +29,7 @@ La aplicación es totalmente responsiva, y se ve excelente tanto en móvil, tabl
 - [Dependencias](#dependencias)
 - [Build](#build)
 - [Test](#test)
+- [Deploy](#deploy)
 - [Run](#run)
   - [Develop](#develop)
   - [Production](#production)
@@ -78,6 +84,14 @@ Para construit la aplicacion se debe correr el siguiente comando `npm run build`
 ## Test
 
 Para correr las pruebas, se debe correr el siguiente comando `npm run test` desde la la carpeta **/client**.
+
+## Deploy
+
+El proyecto está alojado en un servidor gratuito de [Heroku](https://www.heroku.com/), por lo que se puede acceder a el desde la siguiente liga, pero tarda en levantar la primera vez que se accede a el, ya que al ser gratuito, Heroku se mantien en espera para ahorrar recursos, y se despierta hasta que alguien visita el sitio.
+
+[Proyecto de STAR WARS](https://exam-star-wars-infinite-scroll.herokuapp.com/)
+
+> **NOTA:** El archivo package.json contiene los paquetes de **@types** como dependencias del proyecto, esto es muy mala practica, pero se tuvo que hacer así ya que al subirlo a Heroku, hay un problema, y es que Heroku borra todo lo que esta en "devDependencies", lo que genera errores al construir el proyecto y desplegarlo en Heroku.
 
 ## Run
 

@@ -69,7 +69,7 @@ const Header = () => {
   }, [toggleChange]);
 
   return (
-    <header className="header">
+    <header id="header" className="header">
       <Container>
         <nav className="header__nav">
           <ButtonBurger

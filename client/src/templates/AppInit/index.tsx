@@ -16,7 +16,7 @@ const AppInit = ({ children }: AppInitProps) => {
    */
   const handleInitClient = useCallback((): void => {
     AxiosClient.init(APP_CONFIG.API_URL, {
-      timeout: APP_CONFIG.TIMEOUT
+      timeout: APP_CONFIG.TIMEOUT * 1000
     });
   }, []);
 
