@@ -5,6 +5,10 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.2",
+    "@types/lodash": "^4.14.188",
+    "@typescript-eslint/parser": "^5.42.1",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
@@ -50,10 +54,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^13.4.0",
-    "@types/jest": "^29.2.2",
-    "@types/lodash": "^4.14.188",
-    "@typescript-eslint/parser": "^5.42.1",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
