@@ -15,6 +15,7 @@ import useCancelToken from '../../hooks/useCancelToken';
 import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 // API
 import { getPeopleSW } from '../../api/people';
+// Helpers
 import { viewAnchor } from '../../helpers/utils';
 // Types
 import { ResultsType } from '../../interfaces/swPeople';
@@ -235,7 +236,7 @@ const Welcome = () => {
 
       {/* Scroll to top */}
       <Button
-        className={`w-8 h-8 fixed bottom-6 right-6 rotate-90 transition-all	duration-500 ${stylesScrollTop}`}
+        className={`w-8 h-8 fixed bottom-6 right-6 z-1000 rotate-90 transition-all	duration-500 ${stylesScrollTop}`}
         startIcon="chevron-left"
         onClick={handleScrollToTop}
       />

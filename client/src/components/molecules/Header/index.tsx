@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import { useMemo, useCallback, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 // Routes
@@ -14,6 +14,8 @@ import LanguageChanger from '../../molecules/LanguageChanger';
 // Custom Hooks
 import useLogout from '../../../hooks/useLogout';
 import useToggle from '../../../hooks/useToggle';
+// Helpers
+import { enabledScroll, disabledScroll } from '../../../helpers/utils';
 // Assets
 import AvatarM from '../../../assets/images/avatar-m.webp';
 import AvatarF from '../../../assets/images/avatar-f.webp';
@@ -67,6 +69,17 @@ const Header = () => {
   const handleToogleShowMenu = useCallback((): void => {
     toggleChange();
   }, [toggleChange]);
+
+  /**
+   * Si 'toggle' esta activo, se deshabilita el scroll, caso contrario, se habilita.
+   */
+  useEffect(() => {
+    if (toggle) {
+      disabledScroll();
+    } else {
+      enabledScroll();
+    }
+  }, [toggle]);
 
   return (
     <header id="header" className="header">

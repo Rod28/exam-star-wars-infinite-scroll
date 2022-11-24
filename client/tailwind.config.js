@@ -32,6 +32,10 @@ module.exports = {
         error: '#c0392b',
         alert: '#8e44ad',
         info: '#2980b9'
+      },
+      zIndex: {
+        100: '100',
+        1000: '1000'
       }
     }
   },
