@@ -1,0 +1,145 @@
+/* ------------------------------------*\
+  # Main
+\*------------------------------------ */
+@use "../../../sass/modules/m-master" as mt;
+@use "../../../sass/modules/mixins/mixin-querys" as mx-q;
+@use "../../../sass/modules/mixins/mixin-utils" as mx-u;
+
+.header {
+  background: theme("colors.secondary");
+
+  &__image-container {
+    margin-right: theme("spacing.5");
+    margin-left: auto;
+
+    @include mx-q.lg {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    width: theme("spacing.10");
+    height: theme("spacing.10");
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include mx-q.lg {
+      width: theme("spacing.12");
+      height: theme("spacing.12");
+    }
+  }
+
+  // Navigation
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: mt.$box-8;
+
+    @include mx-q.lg {
+      justify-content: flex-end;
+      height: mt.$box-10;
+    }
+  }
+
+  // Menu
+  &__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: theme("spacing.28");
+    padding-bottom: theme("spacing.8");
+    background: theme("colors.zinc.800");
+    transform-origin: right;
+    transition: transform 350ms ease-in-out;
+
+    &--active {
+      transform: scaleX(1);
+    }
+
+    &--inactive {
+      transform: scaleX(0);
+    }
+
+    @include mx-q.lg {
+      position: relative;
+      top: 0;
+      left: 0;
+      flex-direction: row;
+      width: auto;
+      min-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      background: transparent;
+      transform: scaleX(1);
+      transition: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    text-align: center;
+
+    @include mx-q.lg {
+      margin-right: theme("spacing.8");
+      text-align: left;
+
+      &:hover > ul {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  // Elements
+  &__item {
+    padding-bottom: theme("spacing.10");
+
+    &--inactive {
+      color: theme("colors.white");
+
+      @include mx-q.lg {
+        &:hover {
+          color: theme("colors.sky.300");
+        }
+      }
+    }
+
+    @include mx-q.lg {
+      padding-bottom: 0;
+      transition: color 250ms ease-in-out;
+
+      &--inner {
+        padding-bottom: theme("spacing.5");
+      }
+    }
+  }
+
+  // Buttons
+  &__button-burger {
+    position: relative;
+    z-index: 10000;
+
+    &.burger {
+      @include mx-q.lg {
+        display: none;
+      }
+    }
+  }
+
+  &__button-logout {
+    margin-top: theme("spacing.6");
+
+    @include mx-q.lg {
+      margin-top: 0;
+      margin-right: theme("spacing.6");
+    }
+  }
+}

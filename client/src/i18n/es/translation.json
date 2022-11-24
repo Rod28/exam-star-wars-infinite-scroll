@@ -1,0 +1,107 @@
+{
+  "buttons": {
+    "login": "Iniciar sesión",
+    "signUp": "Regístrate",
+    "logout": "Cerrar sesión",
+    "understood": "Entendido",
+    "find": "Buscar",
+    "add": "Agregar",
+    "continue": "Continuar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar mi cuenta"
+  },
+  "rules": {
+    "required": "Este campo es obligatorio.",
+    "invalidText": "El campo contiene caracteres no válidos.",
+    "invalidMail": "El correo no es válido.",
+    "invalidMinLenght3": "Deben ser mínimo 3 caracteres.",
+    "invalidMinLenght8": "Deben ser mínimo 8 caracteres.",
+    "invalidMinLenght": "Número de caracteres inválido.",
+    "invalidPhone": "El teléfono debe ser a 10 dígitos."
+  },
+  "inputs": {
+    "name": "Nombre",
+    "fullName": "Nombre completo",
+    "lastName": "Apellido Paterno",
+    "motherLastName": "Apellido Materno",
+    "dateBirth": "Fecha de nacimiento",
+    "phone": "Teléfono",
+    "gender": "Género",
+    "user": "Usuario",
+    "password": "Contraseña",
+    "male": "Masculino",
+    "feminine": "Femenino",
+    "find": "Buscar por nombre"
+  },
+  "paths": {
+    "Welcome": "Inicio",
+    "MyInformation": "Mi información",
+    "MyFavorites": "Mis favoritos"
+  },
+  "pagination": {
+    "pages": "Página {{start}} - {{end}}"
+  },
+  "screens": {
+    "home": {
+      "title": {
+        "login": "Iniciar sesión",
+        "signUp": "Regístrate"
+      }
+    },
+    "welcome": {
+      "title": "Bienvenido!",
+      "subtitle": "Prueba técnica como desarrollador Web Frontend",
+      "message": "El proyecto es totalmente funcional y no hay conexiones con backend, a excepción de esta pantalla, que hace una petición a una url pública, para obtener información detallada sobre los personajes de <~>. De esta manera, aunque yo no construí el backend, quiero demostrar los conocimientos que tengo para manejar servicios de tipo REST.",
+      "messageTwo": "La creación y eliminación de cuentas, asi como el guardar los personajes a la lista de favoritos, es manejada y persistida a través de <~>, lo que permite hacer una simulación de peticiones como si se conectara con un backend para obtener y eliminar datos.",
+      "itemsFound": "{{items}} personajes encontrados",
+      "name": "Nombre",
+      "height": "Altura",
+      "gender": "Género",
+      "yearBirth": "Año de nacimiento",
+      "weight": "Peso",
+      "skinColor": "Color de piel",
+      "hairColor": "Color de pelo",
+      "eyeColor": "Color de ojos"
+    },
+    "myInformation": {
+      "title": "Mi información"
+    },
+    "MyFavorites": {
+      "title": "Mis favoritos",
+      "message": "Agrega algo de tus gustos favoritos en esta sección, ten en cuenta que todo lo que se agregue, estará ligado a la cuenta del usuario y será almacenado en el <~> del navegador, simulando el guardado y obtención de tu información de una base de datos.",
+      "emptyMessage": "Aún no has agregado nada de tus gustos favorites de esta sección."
+    }
+  },
+  "loaders": {
+    "loading": "Cargando..."
+  },
+  "modals": {
+    "createElement": {
+      "title": "Crear elemento"
+    },
+    "deleteElement": {
+      "title": "Eliminar elemento",
+      "message": "Estás por eliminar un elemento de esta sección, si continuas no podrás revertir el proceso."
+    },
+    "errorLoadInfo": {
+      "title": "Error al obtener la informacion",
+      "message": "Hubo un error al cargar la información, intenta nuevamente."
+    },
+    "errorLogin": {
+      "title": "Error al iniciar sesion",
+      "message": "Usuario o contraseña no válidos."
+    },
+    "invalidUser": {
+      "title": "Usuario no válido",
+      "message": "Este usuario ya existe, intenta con otro usuario diferente."
+    },
+    "newUserCreated": {
+      "title": "Nuevo usuario creado",
+      "message": "Usuario creado con éxito."
+    },
+    "deleteAccount": {
+      "title": "Eliminar cuenta",
+      "message": "Estás por eliminar tu cuenta, si continúas perderás toda tu información y no podrás deshacer este cambio."
+    }
+  }
+}

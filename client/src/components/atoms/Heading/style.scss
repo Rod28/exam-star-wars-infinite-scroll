@@ -1,0 +1,80 @@
+/* ------------------------------------*\
+  # Main
+\*------------------------------------ */
+@use "../../../sass/modules/mixins/mixin-querys" as mx-q;
+@use "../../../sass/modules/mixins/mixin-headings" as mx-h;
+
+// Tamaño muy grande
+.heading1 {
+  @include mx-h.title-txt-12;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-14;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-16;
+  }
+}
+
+.heading2 {
+  @include mx-h.title-txt-10;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-12;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-14;
+  }
+}
+
+// Tamaño base
+.heading3 {
+  @include mx-h.title-txt-9;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-10;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-12;
+  }
+}
+
+.heading4 {
+  @include mx-h.title-txt-8;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-9;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-10;
+  }
+}
+
+.heading5 {
+  @include mx-h.title-txt-7;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-8;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-9;
+  }
+}
+
+// Tamaño muy pequeño
+.heading6 {
+  @include mx-h.title-txt-5;
+
+  @include mx-q.md {
+    @include mx-h.title-txt-6;
+  }
+
+  @include mx-q.xl {
+    @include mx-h.title-txt-7;
+  }
+}

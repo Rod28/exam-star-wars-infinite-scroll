@@ -1,0 +1,30 @@
+/* ------------------------------------*\
+  # Main
+\*------------------------------------ */
+@use "../../../sass/modules/m-master" as mt;
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  background: rgba($color: mt.$black, $alpha: 50%);
+  transition: 350ms ease-in-out;
+  transition-property: opacity, visibility;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--close {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

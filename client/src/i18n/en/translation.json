@@ -1,0 +1,107 @@
+{
+  "buttons": {
+    "login": "Login",
+    "signUp": "Sign up",
+    "logout": "Logout",
+    "understood": "Understood",
+    "find": "Find",
+    "add": "Add",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "delete": "Delete my account"
+  },
+  "rules": {
+    "required": "This field is required.",
+    "invalidText": "The field contains invalid characters.",
+    "invalidMail": "The email is not valid.",
+    "invalidMinLenght3": "Must be at least 3 characters.",
+    "invalidMinLenght8": "Must be at least 8 characters.",
+    "invalidMinLenght": "Invalid number of characters.",
+    "invalidPhone": "The phone must be 10 digits."
+  },
+  "inputs": {
+    "name": "Name",
+    "fullName": "Full name",
+    "lastName": "Last name",
+    "motherLastName": "Mother's last name",
+    "dateBirth": "Date of birth",
+    "phone": "Phone",
+    "gender": "Gender",
+    "user": "User",
+    "password": "Password",
+    "male": "Male",
+    "feminine": "Feminine",
+    "find": "Search by name"
+  },
+  "paths": {
+    "Welcome": "Home",
+    "MyInformation": "My information",
+    "MyFavorites": "My favorites"
+  },
+  "pagination": {
+    "pages": "Page {{start}} - {{end}}"
+  },
+  "screens": {
+    "home": {
+      "title": {
+        "login": "Login",
+        "signUp": "Sign up"
+      }
+    },
+    "welcome": {
+      "title": "Welcome!",
+      "subtitle": "Technical test as a Frontend Web developer",
+      "message": "The project is fully functional and there are no backend connections, except for this screen, which makes a request to a public url, for detailed information about the <~> characters. In this way, although I did not build the backend, I want to demonstrate the knowledge I have to handle REST-type services.",
+      "messageTwo": "The creation and deletion of accounts, as well as the saving of characters to the favorites list, is handled and persisted through <~>, which allows to simulate requests as if it were connected to a backend to obtain and delete data.",
+      "itemsFound": "{{items}} found characters",
+      "name": "Name",
+      "height": "Height",
+      "gender": "Gender",
+      "yearBirth": "Year of birth",
+      "weight": "Weight",
+      "skinColor": "Skin color",
+      "hairColor": "Hair color",
+      "eyeColor": "Eye color"
+    },
+    "myInformation": {
+      "title": "My information"
+    },
+    "MyFavorites": {
+      "title": "My favorites",
+      "message": "Add something of your favorite tastes in this section, keep in mind that everything that is added will be linked to the user's account and will be stored in the <~> of the browser, simulating the saving and obtaining of your information from a database data.",
+      "emptyMessage": "You have not yet added anything of your favorite tastes of this section."
+    }
+  },
+  "loaders": {
+    "loading": "Loading..."
+  },
+  "modals": {
+    "createElement": {
+      "title": "Create element"
+    },
+    "deleteElement": {
+      "title": "Delete item",
+      "message": "You are about to delete an element from this section, if you continue you will not be able to reverse the process."
+    },
+    "errorLoadInfo": {
+      "title": "Error getting the information",
+      "message": "There was an error loading the information, please try again."
+    },
+    "errorLogin": {
+      "title": "Failed to login",
+      "message": "Invalid username or password."
+    },
+    "invalidUser": {
+      "title": "Invalid user",
+      "message": "This user already exists, try a different user."
+    },
+    "newUserCreated": {
+      "title": "New user created",
+      "message": "User created successfully."
+    },
+    "deleteAccount": {
+      "title": "Delete account",
+      "message": "You are about to delete your account, if you continue you will lose all your information and you will not be able to undo this change."
+    }
+  }
+}

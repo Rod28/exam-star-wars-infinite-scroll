@@ -1,0 +1,155 @@
+/* ------------------------------------*\
+  # Main
+\*------------------------------------ */
+@use "../../../sass/modules/m-master" as mt;
+@use "../../../sass/modules/stencil/typography" as tp;
+@use "../../../sass/modules/mixins/mixin-querys" as mx-q;
+@use "../../../sass/modules/mixins/mixin-utils" as mx-u;
+
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: theme("spacing.11");
+  padding: theme("spacing.2") theme("spacing.4");
+  font-family: tp.$font-family;
+  font-weight: theme("fontWeight.semibold");
+  font-size: theme("fontSize.sm");
+  border-width: theme("spacing[0.5]");
+  border-style: solid;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  transition-property: background, color, transform, box-shadow, border-color;
+
+  // Icono
+  .svg {
+    @include mx-u.square(100%);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 4px 3px 12px theme("colors.gray.700/60");
+  }
+
+  &--disabled {
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: auto;
+      box-shadow: none;
+    }
+  }
+
+  /* ------------------------------------*\
+    # Composición de botones
+  \*------------------------------------ */
+
+  // Sizes
+  &--small {
+    padding: theme("spacing.1") theme("spacing.2");
+  }
+
+  &--big {
+    padding: theme("spacing[3.5]") theme("spacing.6");
+  }
+
+  // Shapes
+  &--edges {
+    border-radius: theme("borderRadius.md");
+  }
+
+  &--dragee {
+    border-radius: theme("borderRadius.full");
+  }
+
+  // Templates
+  &--outline {
+    background: transparent;
+  }
+
+  &--text {
+    position: relative;
+    border-width: 0;
+    background: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      opacity: 0.25;
+      background: currentcolor;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 350ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+
+      &::before {
+        transform: translate(-50%, -50%) scale(3);
+      }
+    }
+
+    &:disabled {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  // Estilos para botones con texto e icono
+  &__has-icon {
+    &.icon {
+      @include mx-u.square(theme("spacing.5"));
+    }
+
+    &--left {
+      &.icon {
+        margin-right: theme("spacing.3");
+      }
+    }
+
+    &--right {
+      &.icon {
+        margin-left: theme("spacing.3");
+      }
+    }
+  }
+
+  // Estilos para botones unicamente con iconos
+  &__icon {
+    &.icon {
+      @include mx-u.square(theme("spacing.11"));
+
+      padding: theme("spacing.2");
+      border-radius: theme("borderRadius.full");
+    }
+
+    &--small {
+      &.icon {
+        @include mx-u.square(theme("spacing.10"));
+      }
+    }
+
+    &--big {
+      &.icon {
+        @include mx-u.square(theme("spacing.12"));
+      }
+    }
+
+    &--box {
+      &.icon {
+        border-radius: theme("borderRadius.md");
+      }
+    }
+  }
+}

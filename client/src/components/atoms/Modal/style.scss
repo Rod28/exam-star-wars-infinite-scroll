@@ -1,0 +1,115 @@
+@use "../../../sass/modules/m-master" as mt;
+@use "../../../sass/modules/mixins/mixin-querys" as mx-q;
+@use "../../../sass/modules/mixins/mixin-utils" as mx-u;
+
+.modal-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgb(0 0 0 / 50%);
+  transition: 350ms ease-in-out;
+  transition-property: opacity, visibility;
+  backdrop-filter: blur(6px);
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--close {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    padding: mt.$box-5 mt.$box-2 mt.$box-3;
+    text-align: center;
+    border-radius: theme("borderRadius.lg");
+    background: mt.$white;
+    transform: translate(-50%, -50%) scale(0);
+
+    &--open {
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 250ms 300ms ease-in-out;
+    }
+
+    @include mx-q.sm {
+      @include mx-u.pad-x(mt.$box-3);
+
+      width: mt.$box-56;
+    }
+
+    @include mx-q.md {
+      width: mt.$box-64;
+      padding-top: mt.$box-7;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em;
+    font-size: mt.$txt-4;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    .svg {
+      @include mx-u.square(100%);
+    }
+
+    .icon {
+      @include mx-u.square(mt.$box-4);
+
+      @include mx-q.md {
+        @include mx-u.square(mt.$box-6);
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: mt.$txt-6;
+
+    @include mx-q.md {
+      padding: 0 mt.$box-5;
+      font-size: mt.$txt-7;
+    }
+  }
+
+  &__message {
+    margin-bottom: mt.$box-3;
+    line-height: mt.$txt-7;
+
+    @include mx-q.md {
+      padding: 0 mt.$box-6;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: theme("spacing.56");
+
+    &:last-child {
+      margin-top: mt.$box-2;
+    }
+  }
+}
